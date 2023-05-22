@@ -28,11 +28,17 @@ function displayPosts() {
 }
 
 
-function newestFirst () {
-    console.log("newestFirst");
+function chronoOrder () {
     //we need to reverse the array, and then call the function that will display the posts
     postArray.reverse();
     displayPosts();
+    //we need to change the text of the button
+    if(document.getElementById("chrono").innerHTML === "Oldest First") {
+        document.getElementById("chrono").innerHTML = "Newest First";
+    }
+    else {
+        document.getElementById("chrono").innerHTML = "Oldest First";
+    }
 }
 
 //display the posts when the page is loaded
