@@ -1,62 +1,95 @@
+/* Local variables */
+:root{
+    --bg-body: #331E38;
+    --bg-header: #706993;
+    --texte-body: #CCC9DC;
+}
+
+
 /* Reset default margin and padding */
 body, h1, h2, h3, h4, h5, h6, p, ul, li {
     margin: 0;
     padding: 0;
-  }
+}
   
-  body {
+body {
     font-family: Arial, sans-serif;
-  }
+    background-color:  var(--bg-body);
+    color: var(--texte-body);
+}
   
-  header {
-    background-color: #333;
+header {
+    background-color: var(--bg-header);
     color: #fff;
     padding: 20px;
-  }
+}
   
-  header h1 {
+header h1 {
     margin: 0;
     font-size: 24px;
-  }
+}
   
-  nav ul {
+nav ul {
     list-style: none;
-  }
+}
   
-  nav ul li {
+nav ul li {
     display: inline;
     margin-left: 10px;
-  }
+}
   
-  nav ul li a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
-  }
+}
   
-  main {
+main {
     padding: 20px;
-  }
+}
   
-  article {
+article {
     margin-bottom: 40px;
-  }
+}
   
-  article h2 {
+article h2 {
     margin-bottom: 10px;
     font-size: 20px;
-  }
+}
   
-  article img {
+article img {
     display: block;
     margin-bottom: 10px;
     max-width: 100%;
     height: auto;
-  }
+}
   
-  footer {
-    background-color: #333;
+footer {
+    background-color: var(--bg-header);
     color: #fff;
     padding: 10px;
     text-align: center;
-  }
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
   
+#article-container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+
+.image-article {
+    margin: 5px;
+    flex : 1 1 200px; /* grow shrink basis , permet que les images s'adaptent à la taille de l'écran */
+}
