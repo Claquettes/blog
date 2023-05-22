@@ -89,6 +89,9 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
+    border: 3px solid #fff;
+    border-radius: 10px;
 }
   
 #article-container {
@@ -137,5 +140,30 @@ footer {
     width: 60%;
     left: 50%;
     transform: translateX(-50%);
-
 }
+
+.hosting {
+    /*we create a wave animation by using the animation property with the values of the keyframes we created earlier.*/
+    text-decoration: wavy;
+    animation: wave 4s linear infinite;
+    
+}
+
+
+@keyframes wave {
+    0% {
+      color: #7B506F;
+    }
+    25% {
+      color: #9E768F;
+    }
+    50% {
+      color: #BDA1AF;
+    }
+    75% {
+      color: #DFC8CE;
+    }
+    100% {
+      color: #7B506F;
+    }
+  }
