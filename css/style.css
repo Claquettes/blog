@@ -151,6 +151,10 @@ footer {
     
 }
 
+.article-language {
+    cursor: pointer;
+}
+
 
 @keyframes wave {
     0% {
