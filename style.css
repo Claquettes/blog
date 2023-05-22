@@ -90,6 +90,17 @@ footer {
 }
 
 .image-article {
-    margin: 5px;
+    margin-right: 5px;
     flex : 1 1 200px; /* grow shrink basis , permet que les images s'adaptent à la taille de l'écran */
+}
+
+.article-meta {
+    margin-bottom: 15px
+
+}
+
+.article-meta > span {
+    border: 1px solid #fff;
+    padding: 5px;    
+
 }
