@@ -133,4 +133,9 @@ footer {
 
 .filter {
     margin-bottom: 20px;
+    position: relative;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
