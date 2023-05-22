@@ -23,6 +23,7 @@ header {
     background-color: var(--bg-header);
     color: #fff;
     padding: 20px;
+    box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
 }
   
 header h1 {
@@ -53,7 +54,9 @@ article {
     margin-bottom: 40px;
     background-color: var(--bg-header);
     color: white;
+    box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
 }
+
 
 article p {
     font-size: 17px;
