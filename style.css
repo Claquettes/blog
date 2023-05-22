@@ -128,3 +128,7 @@ footer {
     border: 1px solid #fff;
     padding: 5px;    
 }
+
+.filter {
+    margin-bottom: 20px;
+}
