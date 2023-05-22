@@ -23,9 +23,20 @@
 
   <main>
     <div class="filter">
-      Order by:
-      <button id="chrono" onclick="chronoOrder()">Newest First</button>
-      <button id="language">Language</button>
+      <ul>
+        <li>
+          Order by:
+          <button id="chrono" onclick="chronoOrder()">Newest First</button>
+        </li>
+        <li>
+          Show projects using:
+          <button id="js" onclick="filterJs()">JS</button>
+          <button id="python" onclick="filterPython()">Python</button>
+          <button id="cpp" onclick="filterCpp()">C++</button>
+          <button id="ts" onclick="filterTs()">Ts</button>
+          <button id="reset" onclick="resetFilters()">Reset Filters</button>
+        </li>
+      </ul>
     </div>
     <div id="article-container" >
       <!--Articles will appear here-->
