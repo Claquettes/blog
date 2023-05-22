@@ -3,6 +3,7 @@
     --bg-body: #331E38;
     --bg-header: #706993;
     --texte-body: #CCC9DC;
+    --bg-article: #5A5577;
 }
 
 
@@ -48,12 +49,24 @@ main {
 }
   
 article {
+    padding: 30px;
     margin-bottom: 40px;
+    background-color: var(--bg-header);
+    color: white;
+}
+
+article p {
+    font-size: 17px;
+    margin-top: 2%;
+}
+
+article a {
+    color: #fff;
 }
   
 article h2 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 26px;
 }
   
 article img {
