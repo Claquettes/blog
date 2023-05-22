@@ -87,12 +87,16 @@ footer {
     flex-wrap: wrap;
     height: auto;
     width: 100%;
+
 }
 
 .image-article {
     margin-right: 5px;
     flex : 1 1 200px; /* grow shrink basis , permet que les images s'adaptent à la taille de l'écran */
+    /*We make the image responsive by setting its max-width to 100% and height to auto. */
+    height: auto;
 }
+
 
 .article-meta {
     margin-bottom: 15px
