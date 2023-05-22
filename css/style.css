@@ -63,6 +63,8 @@ article {
 article p {
     font-size: 17px;
     margin-top: 2%;
+    text-align: justify;
+
 }
 
 article a {

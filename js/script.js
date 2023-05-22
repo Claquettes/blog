@@ -1,7 +1,7 @@
 //
 
 //array that contain the id of the posts
-const postArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+const postArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 //array that contain information about the posts, each post is an object, and each object as an id and a language
 const postInfos = [
@@ -69,6 +69,11 @@ const postInfos = [
     {
         id: 13,
         language: "Js",
+        visible: true
+    },
+    {
+        id: 14,
+        language: "Cpp",
         visible: true
     }
 
@@ -166,7 +171,7 @@ function filterPosts() {
     for (let i = 0; i < postArray.length; i++) {
         if (postInfos[postArray[i] - 1].language === currentFilter) {
             //if it is, we mark the post as visible
-            postInfos[postArray[i] - 1].visible = true;
+            postInfos[postArray[i] - 1].visible = true
         }
         else {
             //if it is not, we mark the post as not visible
