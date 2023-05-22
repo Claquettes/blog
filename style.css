@@ -55,6 +55,8 @@ article {
     background-color: var(--bg-header);
     color: white;
     box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
+    border: 3px solid #fff;
+    border-radius: 10px;
 }
 
 
