@@ -238,3 +238,21 @@ footer {
     left: 50%;
     transform: translateX(-50%);
 }
+
+#close-popup {
+    position: relative;
+    display: inline;
+    left: 70%;
+    height: 10%;
+    cursor: pointer;
+}
+
+#close-popup:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+}
+
+#close-popup img {
+    height: 10%;
+    width: 10%;
+}

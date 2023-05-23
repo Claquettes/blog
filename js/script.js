@@ -98,6 +98,7 @@ const postInfos = [
 let filterMode = "language";
 let currentFilterLang = "all";
 let currentFilterYear = "all";
+let popupVisible = true;
 
 //We create a function that will display the posts. Each post is stored in a html file in the folder posts. The content will be displayed in the div with the class "article"; in the "article-container" div
 function displayPosts() {
@@ -240,20 +241,24 @@ function filterPosts() {
     displayPosts();
 }
 
+function closePopup() {
+    console.log("close popup");
+    document.getElementById("article-container").innerHTML = "";
+    displayPosts();
+}
+    
 function main() {
     //when the page is loaded, we display the article 444 (about me popup)
     document.getElementById("article-container").innerHTML = "";
     const newDiv = document.createElement("div");
-    newDiv.classList.add("article");
-    fetch("posts/popup.html")
+    newDiv.classList.add("popup-div");
+    fetch("popup.html")
         .then((response) => response.text())
         .then((data) => {
             newDiv.innerHTML = data;
     });
     document.getElementById("article-container").appendChild(newDiv);
-    //we add an event listener to the button that will close the popup
-    
+    console.log("popup displayed");
 }
 
-//display the posts when the page is loaded
-displayPosts();
+main();
