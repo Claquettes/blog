@@ -28,6 +28,8 @@
   <main>
     <div class="filter">
       <article>
+        <details>
+        <summary>Filters and Order</summary>
       <ul>
         <li>
           Order by:
@@ -39,14 +41,17 @@
           <button id="python" onclick="filterPython()">Python</button>
           <button id="cpp" onclick="filterCpp()">C++</button>
           <button id="ts" onclick="filterTs()">Ts</button>
-          <button id="reset" onclick="resetFilters()">Reset Filters</button>
         </li>
         <li>
           Show projects from the year:
           <button id="2022" onclick="filter2022()">2022</button>
           <button id="2023" onclick="filter2023()">2023</button>
         </li>
+        <li>
+          <button id="reset" onclick="resetFilters()">Reset Filters</button>
+        </li>
       </ul>
+    </details>
       </article>
     </div>
     <div id="article-container" >

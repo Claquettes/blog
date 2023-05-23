@@ -1,7 +1,7 @@
 /* Local variables */
 :root{
-    --bg-body: #331E38;
-    --bg-header: #706993;
+    --bg-body: #262334;
+    --bg-main: #8b316f;
     --texte-body: #CCC9DC;
     --bg-article: #5A5577;
 }
@@ -20,7 +20,7 @@ body {
 }
   
 header {
-    background-color: var(--bg-header);
+    background-color: var(--bg-main);
     color: #fff;
     padding: 20px;
     box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
@@ -52,7 +52,7 @@ main {
 article {
     padding: 30px;
     margin-bottom: 40px;
-    background-color: var(--bg-header);
+    background-color: var(--bg-main);
     color: white;
     box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
     border: 3px solid #fff;
@@ -84,7 +84,7 @@ article img {
 }
   
 footer {
-    background-color: var(--bg-header);
+    background-color: var(--bg-main);
     color: #fff;
     padding: 10px;
     text-align: center;
