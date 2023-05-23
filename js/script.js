@@ -240,6 +240,20 @@ function filterPosts() {
     displayPosts();
 }
 
+function main() {
+    //when the page is loaded, we display the article 444 (about me popup)
+    document.getElementById("article-container").innerHTML = "";
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("article");
+    fetch("posts/popup.html")
+        .then((response) => response.text())
+        .then((data) => {
+            newDiv.innerHTML = data;
+    });
+    document.getElementById("article-container").appendChild(newDiv);
+    //we add an event listener to the button that will close the popup
+    
+}
 
 //display the posts when the page is loaded
 displayPosts();
