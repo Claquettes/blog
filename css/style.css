@@ -173,3 +173,36 @@ footer {
       color: #7B506F;
     }
   }
+
+.center {
+    text-align: center;
+}
+
+#photo {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.image-article-photo {
+    display: flex;
+    margin-right: 5px;
+    flex : 1 1 200px; /* grow shrink basis , permet que les images s'adaptent à la taille de l'écran */ 
+    height: 200px;
+}
+
+.about-me-top-container {
+    display: flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+}
+
+.bio {
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin: 5%;
+    text-align: justify;
+}
