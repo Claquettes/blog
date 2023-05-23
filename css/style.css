@@ -182,6 +182,8 @@ footer {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
 }
 
 .image-article-photo {
@@ -190,7 +192,6 @@ footer {
     flex : 1 1 200px; /* grow shrink basis , permet que les images s'adaptent à la taille de l'écran */ 
     height: 200px;
 }
-
 .about-me-top-container {
     display: flex;
     position: relative;
