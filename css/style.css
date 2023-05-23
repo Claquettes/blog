@@ -184,6 +184,8 @@ footer {
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
+    margin-left: 6%;
+    margin-top: 5%;
 }
 
 .image-article-photo {
@@ -193,6 +195,7 @@ footer {
     height: 200px;
 }
 .about-me-top-container {
+    margin-top: -4%;
     display: flex;
     position: relative;
     left: 50%;
@@ -201,10 +204,9 @@ footer {
 }
 
 .bio {
-    width: 60%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    margin: 5%;
+    width: 60%;    
+    margin : 5%;
+    margin-bottom: 3%;
     text-align: justify;
 }
 
@@ -213,7 +215,6 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 
 #language-container img {
@@ -221,11 +222,19 @@ footer {
     border: 3px solid #fff;
     box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
     /* the max size of the image is 100px */
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
+    background-color: #fff;
 }
 
 #language-container img:hover {
     transform: scale(1.2);
     transition: transform 0.5s ease;
+}
+
+#lang-container-global {
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
 }
