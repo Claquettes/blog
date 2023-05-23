@@ -189,6 +189,23 @@ function filterCpp() {
     //we call the function that filter the posts
     filterPosts();
 }
+
+function filter2022() {
+    //we change the current filter
+    filterMode = "year";
+    currentFilterYear = 2022;
+    //we call the function that filter the posts
+    filterPosts();
+}
+
+function filter2023() {
+    //we change the current filter
+    filterMode = "year";
+    currentFilterYear = 2023;
+    //we call the function that filter the posts
+    filterPosts();
+}
+
 //------------------
 function filterPosts() {
     //we check if we filter by language or by year
