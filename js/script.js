@@ -1,10 +1,3 @@
-//
-
-//array that contain the id of the posts
-const postArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
-//array that contain information about the posts, each post is an object, and each object as an id and a language
-
 
 let filterMode = "language";
 let currentFilterLang = "all";
