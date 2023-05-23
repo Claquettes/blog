@@ -172,7 +172,7 @@ footer {
     100% {
       color: #7B506F;
     }
-  }
+}
 
 .center {
     text-align: center;
@@ -242,9 +242,15 @@ footer {
 #close-popup {
     position: relative;
     display: inline;
-    left: 70%;
+    top: 0%;
+    left : 48%;
     height: 10%;
     cursor: pointer;
+    border: 5px solid;
+    border-color: #8b316f;
+    animation: wave-border 4s linear infinite;
+    font-weight: 700;
+    font-size: larger;
 }
 
 #close-popup:hover {
@@ -255,4 +261,43 @@ footer {
 #close-popup img {
     height: 10%;
     width: 10%;
+    right: 0%;
+}
+
+/* Animations */
+
+@keyframes wave {
+    0% {
+      color: #7B506F;
+    }
+    25% {
+      color: #9E768F;
+    }
+    50% {
+      color: #BDA1AF;
+    }
+    75% {
+      color: #DFC8CE;
+    }
+    100% {
+      color: #7B506F;
+    }
+}
+
+@keyframes wave-border {
+    0% {
+      border-color: #7B506F;
+    }
+    25% {
+      border-color: #9E768F;
+    }
+    50% {
+      border-color: #BDA1AF;
+    }
+    75% {
+      border-color: #DFC8CE;
+    }
+    100% {
+      border-color: #7B506F;
+    }
 }
