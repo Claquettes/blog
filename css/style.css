@@ -179,8 +179,8 @@ footer {
 }
 
 #photo {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     border: 3px solid #fff;
     box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
@@ -201,9 +201,31 @@ footer {
 }
 
 .bio {
-    width: 80%;
+    width: 60%;
     margin-top: 5%;
     margin-bottom: 5%;
     margin: 5%;
     text-align: justify;
+}
+
+#language-container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#language-container img {
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 6px 7px 9px rgba(0, 0, 0, 0.7);
+    /* the max size of the image is 100px */
+    height: 100px;
+    width: 100px;
+}
+
+#language-container img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
 }
