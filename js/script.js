@@ -8,78 +8,96 @@ const postInfos = [
     {
         id: 1,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2022
     },
     {
         id: 2,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2022
+
+
     },
     {
         id: 3,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2022
 
     },
     {
         id: 4,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 5,
         language: "Js", 
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 6,
         language: "Ts",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 7,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 8,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 9,
         language: "Python",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 10,
         language: "Python",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 11,
         language: "Python",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 12,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 13,
         language: "Js",
-        visible: true
+        visible: true,
+        year : 2023
     },
     {
         id: 14,
         language: "Cpp",
-        visible: true
+        visible: true,
+        year : 2023
     }
 
 ];
 
-let currentFilter = "all";
+let filterMode = "language";
+let currentFilterLang = "all";
+let currentFilterYear = "all";
 
 //We create a function that will display the posts. Each post is stored in a html file in the folder posts. The content will be displayed in the div with the class "article"; in the "article-container" div
 function displayPosts() {
@@ -132,6 +150,9 @@ function resetFilters() {
     }
     //we refresh the posts
     displayPosts();
+    filterMode = "language";
+    currentFilterLang = "all";
+    currentFilterYear = "all";
 }
 
 //change filters
@@ -139,49 +160,69 @@ function resetFilters() {
 
 function filterJs() {
     //we change the current filter
-    currentFilter = "Js";
+    filterMode = "language";
+    currentFilterLang = "Js";
     //we call the function that filter the posts
     filterPosts();
 }
 
 function filterTs() {
     //we change the current filter
-    currentFilter = "Ts";
+    filterMode = "language";
+    currentFilterLang = "Ts";
     //we call the function that filter the posts
     filterPosts();
 }
 
 function filterPython() {
     //we change the current filter
-    currentFilter = "Python";
+    filterMode = "language";
+    currentFilterLang = "Python";
     //we call the function that filter the posts
     filterPosts();
 }
 
 function filterCpp() {
     //we change the current filter
-    currentFilter = "Cpp";
+    filterMode = "language";
+    currentFilterLang = "Cpp";
     //we call the function that filter the posts
     filterPosts();
 }
 //------------------
-
 function filterPosts() {
-    //we loop through the array, and check if the value of language is the same as the current filter
-    for (let i = 0; i < postArray.length; i++) {
-        if (postInfos[postArray[i] - 1].language === currentFilter) {
+    //we check if we filter by language or by year
+    if (filterMode === "language") {
+        console.log("filter by language");
+            //we loop through the array, and check if the value of language is the same as the current filter
+        for (let i = 0; i < postArray.length; i++) {
+            if (postInfos[postArray[i] - 1].language === currentFilterLang) {
             //if it is, we mark the post as visible
-            postInfos[postArray[i] - 1].visible = true
+                postInfos[postArray[i] - 1].visible = true
+            }
+            else {
+                //if it is not, we mark the post as not visible
+                postInfos[postArray[i] - 1].visible = false;
+         }
         }
-        else {
-            //if it is not, we mark the post as not visible
-            postInfos[postArray[i] - 1].visible = false;
+    }
+    else if (filterMode === "year") {
+        console.log("filter by year");
+        for (let i = 0; i < postArray.length; i++) {
+            if (postInfos[postArray[i] - 1].year === currentFilterYear) {
+            //if it is, we mark the post as visible
+                postInfos[postArray[i] - 1].visible = true
+            }
+            else {
+                //if it is not, we mark the post as not visible
+                postInfos[postArray[i] - 1].visible = false;
+         }
         }
     }
     //we refresh the posts
     displayPosts();
-    console.log("Post were filtered by " + currentFilter);
 }
+
 
 //display the posts when the page is loaded
 displayPosts();
