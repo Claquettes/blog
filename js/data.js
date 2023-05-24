@@ -113,7 +113,6 @@ const postInfos = [
         language: "Ts",
         visible: true,
         year : 2023,
-        scolar : fals
+        scolar : false
     }
-
 ];

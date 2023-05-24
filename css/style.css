@@ -148,7 +148,6 @@ footer {
     /*we create a wave animation by using the animation property with the values of the keyframes we created earlier.*/
     text-decoration: wavy;
     animation: wave 4s linear infinite;
-    
 }
 
 .article-language {
