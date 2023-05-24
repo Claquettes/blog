@@ -2,6 +2,7 @@
 let filterMode = "language";
 let currentFilterLang = "all";
 let currentFilterYear = "all";
+let onlyScolar = false;
 let popupVisible = true;
 
 //We create a function that will display the posts. Each post is stored in a html file in the folder posts. The content will be displayed in the div with the class "article"; in the "article-container" div
@@ -58,6 +59,7 @@ function resetFilters() {
     filterMode = "language";
     currentFilterLang = "all";
     currentFilterYear = "all";
+    onlyScolar = false;
 }
 
 //change filters
@@ -91,6 +93,13 @@ function filterCpp() {
     //we change the current filter
     filterMode = "language";
     currentFilterLang = "Cpp";
+    //we call the function that filter the posts
+    filterPosts();
+}
+
+function filterScolar() {
+    //we change the current filter,
+    filterMode = "scolar";
     //we call the function that filter the posts
     filterPosts();
 }
@@ -139,6 +148,19 @@ function filterPosts() {
                 //if it is not, we mark the post as not visible
                 postInfos[postArray[i] - 1].visible = false;
          }
+        }
+    }
+    else if (filterMode === "scolar") {
+        console.log("filter by scolar");
+        for (let i = 0; i < postArray.length; i++) {
+            if (postInfos[postArray[i] - 1].scolar === true) {
+            //if it is, we mark the post as visible
+                postInfos[postArray[i] - 1].visible = true
+            }
+            else {
+                //if it is not, we mark the post as not visible
+                postInfos[postArray[i] - 1].visible = false;
+            }
         }
     }
     //we refresh the posts
