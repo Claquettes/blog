@@ -155,6 +155,9 @@ footer {
     cursor: pointer;
 }
 
+.scolar {
+    cursor: pointer;
+}
 
 @keyframes wave {
     0% {
