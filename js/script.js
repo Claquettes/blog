@@ -43,6 +43,16 @@ function showNumberOfPosts() {
     document.getElementById("numberOfPosts").innerHTML = "They are currently " + numberOfPostsInThisScope + " posts in this scope";
 }
 
+function hideFilters() {
+    //we hide the class filter
+    document.getElementById("filter").classList.add("hidden");
+}
+
+function showFilters() {
+    //we show the class filter
+    document.getElementById("filter").classList.remove("hidden");
+}
+
 function chronoOrder () {
     //we need to reverse the array
     postArray.reverse();
@@ -128,12 +138,14 @@ function filterPosts() {
 function closePopup() {
     console.log("close popup");
     document.getElementById("article-container").innerHTML = "";
+    showFilters();
     displayPosts();
     showNumberOfPosts();
 }
     
 function main() {
     //when the page is loaded, we display the article 444 (about me popup)
+    hideFilters();
     document.getElementById("article-container").innerHTML = "";
     const newDiv = document.createElement("div");
     newDiv.classList.add("popup-div");

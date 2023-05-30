@@ -136,7 +136,7 @@ footer {
     padding: 5px;    
 }
 
-.filter {
+#filter {
     margin-bottom: 20px;
     position: relative;
     width: 60%;
@@ -327,4 +327,8 @@ sidebar ul {
 
 sidebar li {
     margin-bottom: 10px;
+}
+
+.hidden{
+    display: none;
 }
