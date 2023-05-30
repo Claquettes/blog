@@ -15,10 +15,9 @@ function displayPosts() {
     for (let i = 0; i < postArray.length; i++) {
         //we need to check if the post is visible
         if (postInfos[postArray[i] - 1].visible === false) {
-            console.log("post number " + postArray[i] + " is not visible");
-            numberOfPostsInThisScope++;
-            continue;
+            //we do nothing
         }
+        else {
         //we create a new div
         console.log("create new div for post number " + postArray[i]);
         const newDiv = document.createElement("div");
@@ -33,6 +32,9 @@ function displayPosts() {
         });
         //we add the div to the div with the class "article-container"
         document.getElementById("article-container").appendChild(newDiv);
+        //we increment the number of posts in this scope
+        numberOfPostsInThisScope++;
+        }
     }
 }
 
