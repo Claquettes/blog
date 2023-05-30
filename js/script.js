@@ -4,17 +4,19 @@ let currentFilterLang = "all";
 let currentFilterYear = "all";
 let onlyScolar = false;
 let popupVisible = true;
+let numberOfPostsInThisScope = 0;
 
 //We create a function that will display the posts. Each post is stored in a html file in the folder posts. The content will be displayed in the div with the class "article"; in the "article-container" div
 function displayPosts() {
-    console.log("displayPosts");
-    //we need to empty the div before displaying the posts
     document.getElementById("article-container").innerHTML = "";
+    //we reset the number of posts in this scope
+    numberOfPostsInThisScope = 0;
     //we loop through the array
     for (let i = 0; i < postArray.length; i++) {
         //we need to check if the post is visible
         if (postInfos[postArray[i] - 1].visible === false) {
             console.log("post number " + postArray[i] + " is not visible");
+            numberOfPostsInThisScope++;
             continue;
         }
         //we create a new div
@@ -32,6 +34,11 @@ function displayPosts() {
         //we add the div to the div with the class "article-container"
         document.getElementById("article-container").appendChild(newDiv);
     }
+}
+
+function showNumberOfPosts() {
+    //we display the number of posts in this scope
+    document.getElementById("numberOfPosts").innerHTML = "They are currently " + numberOfPostsInThisScope + " posts in this scope";
 }
 
 function chronoOrder () {
@@ -56,6 +63,7 @@ function resetFilters() {
     }
     //we refresh the posts
     displayPosts();
+    showNumberOfPosts();
     filterMode = "language";
     currentFilterLang = "all";
     currentFilterYear = "all";
@@ -112,12 +120,14 @@ function filterPosts() {
     }
     //we refresh the posts
     displayPosts();
+    showNumberOfPosts();
 }
 
 function closePopup() {
     console.log("close popup");
     document.getElementById("article-container").innerHTML = "";
     displayPosts();
+    showNumberOfPosts();
 }
     
 function main() {
