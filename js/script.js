@@ -35,8 +35,6 @@ function showNumberOfPosts() {
     document.getElementById("numberOfPosts").innerHTML = "They are currently " + numberOfPostsInThisScope + " posts in this scope";
 }
 
-
-
 function chronoOrder () {
     //we need to reverse the array
     postArray.reverse();
