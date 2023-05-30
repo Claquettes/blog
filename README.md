@@ -11,4 +11,5 @@ This is my personal blog where I will be posting my projects and my thoughts abo
 The site is built using simple HTML and CSS, and all of the logic is handled by Javascript. All of posts are stored in html files, and the site is built dynamically using the data from those files. 
 --------------------------
 ## Thoughts
+
 It was nice to look back at my old projects and see how much I have improved since then. I also enjoyed the process of building the site. I think that this project was a great way to document my journey as a developer, and I will continue to use it to document my progress.
