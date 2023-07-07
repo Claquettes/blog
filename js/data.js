@@ -170,5 +170,5 @@ const postInfos = [
         visible: true,
         year : 2023,
         scolar : false
-    }
+    },
 ];
