@@ -45,6 +45,13 @@ function filterScolar() {
     filterPosts();
 }
 
+function filterWebsites() {
+    //we change the current filter
+    filterMode = "website";
+    //we call the function that filter the posts
+    filterPosts();
+}
+
 function filter2022() {
     //we change the current filter
     filterMode = "year";
@@ -119,6 +126,19 @@ function filterPosts() {
         console.log("filter by scolar");
         for (let i = 0; i < postArray.length; i++) {
             if (postInfos[postArray[i] - 1].scolar === true) {
+            //if it is, we mark the post as visible
+                postInfos[postArray[i] - 1].visible = true
+            }
+            else {
+                //if it is not, we mark the post as not visible
+                postInfos[postArray[i] - 1].visible = false;
+            }
+        }
+    }
+    else if (filterMode === "website") {
+        console.log("filter by website");
+        for (let i = 0; i < postArray.length; i++) {
+            if (postInfos[postArray[i] - 1].website === true) {
             //if it is, we mark the post as visible
                 postInfos[postArray[i] - 1].visible = true
             }
